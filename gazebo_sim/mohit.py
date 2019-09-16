@@ -23,6 +23,7 @@ class module:
 		self.tag=modtag
 		self.linktype=link
 		self.parent=parent
+		
 		if link == 1:
 			min1=-90
 			max1=90
@@ -68,8 +69,8 @@ class module:
 			contype='t'
 		elif link == 6:
  			min1=-90
-			max1=90
-			min2=-180
+ 			max1=90
+ 			min2=-180
 			max2=180
 			min3=-90
 			max3=90
@@ -234,6 +235,9 @@ class module:
 			contype='p'
 			pangtype=5
 			prot=-prot
+
+		"""
+
 		if contype=='a':
 			self.conv(prot,motno,link,phib,deltab,phit,deltat)    #connection type(contype) is the type angle requires for realtive rot between the modules ,ie t=top disk,p=parent,a=is for active disk
 		elif contype=='t':
@@ -329,7 +333,7 @@ class module:
 			pang=module.angle(prot)
 			pang.setParentAng(pangtype,pang.curr)
 
-
-if name == "__main__":
+"""
+if __name__ == "__main__":
 	print("Inside main")
 	mod1=module(2,1,45,1,30,60,25,67)
